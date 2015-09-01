@@ -4,7 +4,8 @@ before_action :require_user, except: [:index, :show]
 before_action :require_same_user, only: [:edit, :update]
 
   def index
-    @posts = Post.all.sort_by{|x| x.total_votes}.reverse
+    @posts = Post.limit(Post::PER_PAGE).offset(params[:offset])
+    @pages = (Post.all.size.to_f / Post::PER_PAGE).ceil
   end
 
   def show
