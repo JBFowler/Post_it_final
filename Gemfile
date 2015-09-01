@@ -13,9 +13,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bcrypt-ruby', '~> 3.0.0'
-gem 'voteable_joe', '~> 0.0.2', path: '/home/joe84/Documents/Tealeaf Academy/Lesson 2/Course1/voteable-gem'
-gem 'sluggable_joe', '~> 0.0.2', path: '/home/joe84/Documents/Tealeaf Academy/Lesson 2/Course1/sluggable-gem'
-
+gem 'voteable_joe', '~> 0.0.2'
+gem 'sluggable_joe', '~> 0.0.2'
 group :doc do
   gem 'sdoc', require: false
 end
