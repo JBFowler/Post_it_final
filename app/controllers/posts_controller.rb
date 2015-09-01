@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 before_action :set_post, only: [:show, :edit, :update, :vote]
-before_action :require_user, except: [:index, :show, :edit]
+before_action :require_user, except: [:index, :show]
 before_action :require_same_user, only: [:edit, :update]
 
   def index
@@ -67,9 +67,6 @@ before_action :require_same_user, only: [:edit, :update]
   end
 
   def require_same_user
-    if current_user!= @post.creator
-      flash["error"] = "You're not allowed to do that."
-      redirect_to root_path
-    end
+    access_denied unless (current_user == @post.creator || current_user.admin?)
   end
 end
