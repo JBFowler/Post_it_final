@@ -24351,3 +24351,5 @@ Processing by PostsController#index as HTML
   Rendered layouts/_navigation.html.erb (1.0ms)
   Rendered layouts/_messages.html.erb (0.0ms)
 Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1

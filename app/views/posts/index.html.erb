@@ -12,3 +12,17 @@
   <% end %>
 <% end %>
 |
+
+<!-- <div class="pagination">
+  <ul>
+    <li class="disabled"><span>&laquo;</span></li>
+    <% @pages.times do |n| %>
+      <% if (params[:offset].nil? && n == 0) || params[:offset].to_s == (n * Post::PER_PAGE).to_s %>
+        <li class='active'><%= '#{n+1}'%></li>
+      <% else %>
+        <li><%= link_to "#{n+1}", posts_path(offset: n * Post::PER_PAGE) %></li>
+      <% end %>
+    <% end %>
+    <li class="disabled"><span>&raquo;</span></li>
+  </ul>
+</div> -->
